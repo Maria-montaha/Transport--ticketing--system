@@ -1,6 +1,6 @@
 
 <x-admin-layout>
-    <h1>Ticket Page</h1>
+   
     <div class="container">
         <h1>Ticket Page</h1>
         <table class="table table-striped">

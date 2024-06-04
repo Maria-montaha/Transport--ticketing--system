@@ -15,6 +15,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ URL('tickets') }}">Ticket</a>
                 </li>
+               
                 <li class="nav-item">
                     <a class="nav-link" href="{{ URL('users') }}">Buses</a>
                 </li>
@@ -47,7 +48,13 @@
                             {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a></li>
+                            @if(Auth::user()->role == 'admin')
+                                <li><a class="dropdown-item" href="{{ url('admin') }}">Dashboard</a></li>
+                            @elseif(Auth::user()->role == 'user')
+                                <li><a class="dropdown-item" href="{{ url('user') }}">Dashboard</a></li>
+                            @elseif(Auth::user()->role == 'staff')
+                                <li><a class="dropdown-item" href="{{ url('staff') }}">Dashboard</a></li>
+                            @endif
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

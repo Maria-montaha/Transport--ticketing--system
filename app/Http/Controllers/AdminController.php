@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
@@ -10,17 +9,17 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function user()
+    public function adminIndex()
     {
-        echo"hello user ";
+        return view('admin.dashboard');
     }
-    public function admin()
+    public function staffIndex()
     {
-        echo"hello admin";
+        return view('staff.dashboard');
     }
-    public function staff()
+    public function userIndex()
     {
-        echo"hello staff";
+        return view('user.dashboard');
     }
 
     /**
@@ -71,3 +70,75 @@ class AdminController extends Controller
         //
     }
 }
+
+// namespace App\Http\Controllers;
+
+// use App\Models\Admin;
+// use Illuminate\Http\Request;
+
+// class AdminController extends Controller
+// {
+//     /**
+//      * Display a listing of the resource.
+//      */
+//     public function user()
+//     {
+//         echo"hello user ";
+//     }
+//     public function admin()
+//     {
+//         echo"hello admin";
+//     }
+//     public function staff()
+//     {
+//         echo"hello staff";
+//     }
+
+//     /**
+//      * Show the form for creating a new resource.
+//      */
+//     public function create()
+//     {
+//         //
+//     }
+
+//     /**
+//      * Store a newly created resource in storage.
+//      */
+//     public function store(Request $request)
+//     {
+//         //
+//     }
+
+//     /**
+//      * Display the specified resource.
+//      */
+//     public function show(Admin $admin)
+//     {
+//         //
+//     }
+
+//     /**
+//      * Show the form for editing the specified resource.
+//      */
+//     public function edit(Admin $admin)
+//     {
+//         //
+//     }
+
+//     /**
+//      * Update the specified resource in storage.
+//      */
+//     public function update(Request $request, Admin $admin)
+//     {
+//         //
+//     }
+
+//     /**
+//      * Remove the specified resource from storage.
+//      */
+//     public function destroy(Admin $admin)
+//     {
+//         //
+//     }
+// }
