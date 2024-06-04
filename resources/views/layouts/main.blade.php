@@ -9,6 +9,7 @@
     @yield('head')
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/lightbox.min.css')}}">
+    
     <link rel="stylesheet" href="{{asset('assets/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css')}}">
 <body>
     <div class="container">

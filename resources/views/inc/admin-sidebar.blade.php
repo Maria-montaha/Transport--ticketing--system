@@ -170,7 +170,7 @@
       <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
-          <div data-i18n="Account Settings">Profile Settings</div>
+          <div data-i18n="Account Settings">Booking</div>
         </a>
         <ul class="menu-sub">
           <li class="menu-item">
@@ -179,13 +179,13 @@
             </a>
           </li>
           <li class="menu-item">
-            <a href="pages-account-settings-notifications.html" class="menu-link">
-              <div data-i18n="Notifications">Create</div>
+            <a href="{{ route('booking.index') }}" class="menu-link">
+              <div data-i18n="Notifications">Index</div>
             </a>
           </li>
           <li class="menu-item">
-            <a href="pages-account-settings-connections.html" class="menu-link">
-              <div data-i18n="Connections">update</div>
+            <a href="{{ route('booking.create') }}"  class="menu-link">
+              <div data-i18n="Connections">create</div>
             </a>
           </li>
         </ul>

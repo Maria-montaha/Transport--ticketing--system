@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckAdminRole;
@@ -22,6 +23,7 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 
 Route::middleware(CheckAdminRole::class)->group(function () {
 Route::get('/admin', [AdminController::class, 'adminIndex'])->name('admin');
+Route::resource('booking', BookingController::class);
 });
 Route::middleware(CheckStaffRole::class)->group(function () {
 Route::get('/staff', [AdminController::class, 'staffIndex'])->name('staff');
