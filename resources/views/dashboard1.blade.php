@@ -5,7 +5,7 @@
         <div class="container-xxl flex-grow-1 container-p-y">
           <div class="row gy-4">
             <!-- Congratulations card -->
-            <div class="col-md-12 col-lg-4">
+            {{-- <div class="col-md-12 col-lg-4">
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title mb-1">Congratulations John! 🎉</h4>
@@ -17,11 +17,11 @@
                 <img src="{{ asset('assets/img/icons/misc/triangle-light.png') }}" class="scaleX-n1-rtl position-absolute bottom-0 end-0" width="166" alt="triangle background">
                 <img src="{{ asset('assets/img/illustrations/trophy.png') }}" class="scaleX-n1-rtl position-absolute bottom-0 end-0 me-4 mb-4 pb-2" width="83" alt="view sales">
               </div>
-            </div>
+            </div> --}}
             <!--/ Congratulations card -->
 
             <!-- Transactions -->
-            <div class="col-lg-8">
+            {{-- <div class="col-lg-8">
               <div class="card">
                 <div class="card-header">
                   <div class="d-flex align-items-center justify-content-between">
@@ -96,11 +96,11 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
             <!--/ Transactions -->
 
             <!-- Weekly Overview Chart -->
-            <div class="col-xl-4 col-md-6">
+            {{-- <div class="col-xl-4 col-md-6">
               <div class="card">
                 <div class="card-header">
                   <div class="d-flex justify-content-between">
@@ -130,11 +130,11 @@
                   </div>
                 <div class="resize-triggers"><div class="expand-trigger"><div style="width: 422px; height: 353px;"></div></div><div class="contract-trigger"></div></div></div>
               </div>
-            </div>
+            </div> --}}
             <!--/ Weekly Overview Chart -->
 
             <!-- Total Earnings -->
-            <div class="col-xl-4 col-md-6">
+            {{-- <div class="col-xl-4 col-md-6">
               <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between">
                   <h5 class="card-title m-0 me-2">Total Earning</h5>
@@ -215,11 +215,11 @@
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> --}}
             <!--/ Total Earnings -->
 
             <!-- Four Cards -->
-            <div class="col-xl-4 col-md-6">
+            {{-- <div class="col-xl-4 col-md-6">
               <div class="row gy-4">
                 <!-- Total Profit line chart -->
                 <div class="col-sm-6">
@@ -310,11 +310,11 @@
                 </div>
                 <!--/ Sessions chart -->
               </div>
-            </div>
+            </div> --}}
             <!--/ Total Earning -->
 
             <!-- Sales by Countries -->
-            <div class="col-xl-4 col-md-6">
+            {{-- <div class="col-xl-4 col-md-6">
               <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between">
                   <h5 class="card-title m-0 me-2">Sales by Countries</h5>
@@ -427,11 +427,11 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
             <!--/ Sales by Countries -->
 
             <!-- Deposit / Withdraw -->
-            <div class="col-xl-8">
+            {{-- <div class="col-xl-8">
               <div class="card h-100">
                 <div class="card-body row g-2">
                   <div class="col-12 col-md-6 card-separator pe-0 pe-md-3">
@@ -576,11 +576,11 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
             <!-- Deposit / Withdraw -->
 
             <!-- Data Tables -->
-            <div class="col-12">
+            {{-- <div class="col-12">
               <div class="card">
                 <div class="table-responsive">
                   <table class="table">
@@ -759,10 +759,10 @@
                   </table>
                 </div>
               </div>
-            </div>
+            </div> --}}
             <!--/ Data Tables -->
-          </div>
-        </div>
+          {{-- </div>
+        </div> --}}
         <!-- / Content -->
 
         <!-- Footer -->

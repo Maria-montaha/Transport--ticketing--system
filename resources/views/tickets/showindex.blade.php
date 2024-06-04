@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEva6P9RGNhf6H7P7EYcCWt4eHiBfTTbfIL6pVoS8ZRbY" crossorigin="anonymous">
-    <title>Ticket Page</title>
-</head>
-<body>
+
+<x-admin-layout>
     <h1>Ticket Page</h1>
     <div class="container">
         <h1>Ticket Page</h1>
@@ -44,8 +37,7 @@
        
         </table>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6HV2Tqx4YXbwWiG+J5bMOYeYZWOyU85jhj9JZNMmXLwGj4tW+5oCqxb6Jxn" crossorigin="anonymous"></script>
-</body>
-</html>
-</table>
+  
+</x-admin-layout>
+
 

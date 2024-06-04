@@ -3,7 +3,8 @@
       <a href="index.html" class="app-brand-link">
         <span class="app-brand-logo demo me-1">
           <span style="color: var(--bs-primary)">
-            <svg width="30" height="24" viewBox="0 0 250 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a class="navbar-brand" href="#"><img src="{{ asset('assets/img/avatars/logo.png') }}" alt="" width="50" height="25"  viewBox="0 0 250 196" fill="none"></a>
+            {{-- <svg width="30" height="24" viewBox="0 0 250 196" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -60,10 +61,11 @@
                 d="M237.721 1.18923L125 70.3075V136.87L250 65.2465V8.06814C250 3.61223 246.389 0 241.935 0C240.448 0 238.99 0.411583 237.721 1.18923Z"
                 fill="white"
                 fill-opacity="0.3" />
-            </svg>
+            </svg> --}}
           </span>
         </span>
         <span class="app-brand-text demo menu-text fw-semibold ms-2">{{ config('app.name') }}</span>
+       
       </a>
 
       <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -75,7 +77,7 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboards -->
-      <li class="menu-item active open">
+      {{-- <li class="menu-item active open">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
           <div data-i18n="Dashboards">Dashboards</div>
@@ -88,10 +90,10 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> --}}
 
       <!-- Layouts -->
-      <li class="menu-item">
+      {{-- <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-window-maximize"></i>
           <div data-i18n="Layouts">Layouts</div>
@@ -128,9 +130,9 @@
 
       <li class="menu-header fw-medium mt-4">
         <span class="menu-header-text">Apps &amp; Pages</span>
-      </li>
+      </li> --}}
       <!-- Apps -->
-      <li class="menu-item">
+      {{-- <li class="menu-item">
         <a
           href="#"
           target="_blank"
@@ -147,17 +149,9 @@
           <i class="menu-icon tf-icons mdi mdi-message-outline"></i>
           <div data-i18n="Chat">Chat</div>
         </a>
-      </li>
-      <li class="menu-item">
-        <a
-          href="#"
-          target="_blank"
-          class="menu-link">
-          <i class="menu-icon tf-icons mdi mdi-calendar-blank-outline"></i>
-          <div data-i18n="Calendar">Calendar</div>
-        </a>
-      </li>
-      <li class="menu-item">
+      </li> --}}
+      
+      {{-- <li class="menu-item">
         <a
           href="#"
           target="_blank"
@@ -166,32 +160,46 @@
           <div data-i18n="Kanban">Kanban</div>
 
         </a>
-      </li>
+      </li> --}}
       <!-- Pages -->
+      <li class="menu-item">
+       
+        <a class="menu-link active" aria-current="aria-current="href="{{ URL('/') }}"><i class="menu-icon tf-icons mdi mdi-account-outline"></i>
+          Home</a>
+      </li>
       <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
-          <div data-i18n="Account Settings">Account Settings</div>
+          <div data-i18n="Account Settings">Profile Settings</div>
         </a>
         <ul class="menu-sub">
           <li class="menu-item">
             <a href="pages-account-settings-account.html" class="menu-link">
-              <div data-i18n="Account">Account</div>
+              <div data-i18n="Account">{{ auth()->user()->name }}</div>
             </a>
           </li>
           <li class="menu-item">
             <a href="pages-account-settings-notifications.html" class="menu-link">
-              <div data-i18n="Notifications">Notifications</div>
+              <div data-i18n="Notifications">Create</div>
             </a>
           </li>
           <li class="menu-item">
             <a href="pages-account-settings-connections.html" class="menu-link">
-              <div data-i18n="Connections">Connections</div>
+              <div data-i18n="Connections">update</div>
             </a>
           </li>
         </ul>
       </li>
-      <li class="menu-item">
+      {{-- <li class="menu-item">
+        <a
+          href="#"
+          target="_blank"
+          class="menu-link">
+          <i class="menu-icon tf-icons mdi mdi-calendar-blank-outline"></i>
+          <div data-i18n="Calendar">Calendar</div>
+        </a>
+      </li> --}}
+      {{-- <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-lock-open-outline"></i>
           <div data-i18n="Authentications">Authentications</div>
@@ -213,8 +221,8 @@
             </a>
           </li>
         </ul>
-      </li>
-      <li class="menu-item">
+      </li> --}}
+      {{-- <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-cube-outline"></i>
           <div data-i18n="Misc">Misc</div>
@@ -231,17 +239,23 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> --}}
       <!-- Components -->
       <li class="menu-header fw-medium mt-4"><span class="menu-header-text">Components</span></li>
       <!-- Cards -->
+      <li class="menu-item">
+        <a href="{{ URL('tickets') }}" class="menu-link">
+          <i class="menu-icon tf-icons mdi mdi-credit-card-outline"></i>
+          <div data-i18n="Basic">Ticket</div>
+        </a>
+      </li>
       <li class="menu-item">
         <a href="cards-basic.html" class="menu-link">
           <i class="menu-icon tf-icons mdi mdi-credit-card-outline"></i>
           <div data-i18n="Basic">Cards</div>
         </a>
       </li>
-      <!-- User interface -->
+      {{-- <!-- User interface -->
       <li class="menu-item">
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-archive-outline"></i>
@@ -344,10 +358,10 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> --}}
 
       <!-- Extended components -->
-      <li class="menu-item">
+      {{-- <li class="menu-item">
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-star-outline"></i>
           <div data-i18n="Extended UI">Extended UI</div>
@@ -364,20 +378,20 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> --}}
 
       <!-- Icons -->
-      <li class="menu-item">
+      {{-- <li class="menu-item">
         <a href="icons-mdi.html" class="menu-link">
           <i class="menu-icon tf-icons mdi mdi-google-circles-extended"></i>
           <div data-i18n="Icons">Icons</div>
         </a>
-      </li>
+      </li> --}}
 
       <!-- Forms & Tables -->
-      <li class="menu-header fw-medium mt-4"><span class="menu-header-text">Forms &amp; Tables</span></li>
-      <!-- Forms -->
-      <li class="menu-item">
+      {{-- <li class="menu-header fw-medium mt-4"><span class="menu-header-text">Forms &amp; Tables</span></li>
+      <!-- Forms --> --}}
+      {{-- <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-form-select"></i>
           <div data-i18n="Form Elements">Form Elements</div>
@@ -412,30 +426,30 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> --}}
       <!-- Form Validation -->
-      <li class="menu-item">
-        <a
+      {{-- <li class="menu-item">
+        <a --}}
           {{-- href="https://demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/form-validation.html" --}}
-          target="_blank"
+          {{-- target="_blank"
           class="menu-link">
           <i class="menu-icon tf-icons mdi mdi-checkbox-marked-circle-outline"></i>
           <div data-i18n="Form Validation">Form Validation</div>
           <div class="badge bg-label-primary fs-tiny rounded-pill ms-auto">Pro</div>
         </a>
-      </li>
+      </li> --}}
       <!-- Tables -->
-      <li class="menu-item">
+      {{-- <li class="menu-item">
         <a href="tables-basic.html" class="menu-link">
           <i class="menu-icon tf-icons mdi mdi-table"></i>
           <div data-i18n="Tables">Tables</div>
         </a>
-      </li>
+      </li> --}}
       <!-- Data Tables -->
-      <li class="menu-item">
-        <a
+      {{-- <li class="menu-item">
+        <a --}}
           {{-- href="https://demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/tables-datatables-basic.html" --}}
-          target="_blank"
+          {{-- target="_blank"
           class="menu-link">
           <i class="menu-icon tf-icons mdi mdi-grid"></i>
           <div data-i18n="Datatables">Datatables</div>
@@ -445,22 +459,22 @@
       <!-- Misc -->
       <li class="menu-header fw-medium mt-4"><span class="menu-header-text">Misc</span></li>
       <li class="menu-item">
-        <a
+        <a --}}
           {{-- href="https://github.com/themeselection/materio-bootstrap-html-admin-template-free/issues" --}}
-          target="_blank"
+          {{-- target="_blank"
           class="menu-link">
           <i class="menu-icon tf-icons mdi mdi-lifebuoy"></i>
           <div data-i18n="Support">Support</div>
         </a>
-      </li>
-      <li class="menu-item">
-        <a
+      </li> --}}
+      {{-- <li class="menu-item">
+        <a --}}
           {{-- href="https://demos.themeselection.com/materio-bootstrap-html-admin-template/documentation/" --}}
-          target="_blank"
+          {{-- target="_blank"
           class="menu-link">
           <i class="menu-icon tf-icons mdi mdi-file-document-multiple-outline"></i>
           <div data-i18n="Documentation">Documentation</div>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </aside>
