@@ -1,5 +1,5 @@
 <x-admin-layout>
-   
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> --}}
     <div class="container">
         <h1>Ticket Page</h1>
         <table class="table table-striped table-hover">
@@ -25,11 +25,11 @@
                         <td>{{ $booking->created_at }}</td>
                         <td>{{ $booking->updated_at }}</td>
                         <td>
-                            <a href="{{ route('booking.edit', $booking->id) }}" class="btn btn-warning outline">Edit</a>
+                            <a href="{{ route('booking.edit', $booking->id) }}" class="btn btn-warning outline"><i class="bi bi-pencil-square"></i></a>
                             <form action="{{ route('booking.destroy', $booking->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" value="delete" class="btn btn-danger"><i class="bi bi-trash3"></i>DELETE</button>
+                                <button type="submit" value="delete" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
                             </form>
                         </td>
                     </tr>
