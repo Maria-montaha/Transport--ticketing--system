@@ -7,12 +7,9 @@ use Illuminate\Http\Request;
 
 class VehicleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return view('vehicle.index', ['vehicle' => vehicle::all()]);
     }
 
     /**
@@ -20,7 +17,7 @@ class VehicleController extends Controller
      */
     public function create()
     {
-        //
+        return view('vehicle.create');
     }
 
     /**
@@ -28,13 +25,14 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        vehicle::create($request->all());
+        return redirect()->route('vehicle.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Vehicle $vehicle)
+    public function show(vehicle $vehicle)
     {
         //
     }
@@ -42,24 +40,86 @@ class VehicleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Vehicle $vehicle)
+    public function edit(vehicle $vehicle)
     {
-        //
+        return view('vehicle.edit', ['vehicle' => $vehicle]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Vehicle $vehicle)
+    public function update(Request $request, vehicle $vehicle)
     {
-        //
+        $vehicle->update($request->all());
+        return redirect()->route('vehicle.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Vehicle $vehicle)
+    public function destroy(vehicle $vehicle)
     {
-        //
+        $vehicle->delete();
+        return redirect()->route('vehicle.index');
     }
 }
+
+
+
+
+    /**
+     * Display a listing of the resource.
+     */
+//     public function index()
+//     {
+//         //
+//     }
+
+//     /**
+//      * Show the form for creating a new resource.
+//      */
+//     public function create()
+//     {
+//         //
+//     }
+
+//     /**
+//      * Store a newly created resource in storage.
+//      */
+//     public function store(Request $request)
+//     {
+//         //
+//     }
+
+//     /**
+//      * Display the specified resource.
+//      */
+//     public function show(Vehicle $vehicle)
+//     {
+//         //
+//     }
+
+//     /**
+//      * Show the form for editing the specified resource.
+//      */
+//     public function edit(Vehicle $vehicle)
+//     {
+//         //
+//     }
+
+//     /**
+//      * Update the specified resource in storage.
+//      */
+//     public function update(Request $request, Vehicle $vehicle)
+//     {
+//         //
+//     }
+
+//     /**
+//      * Remove the specified resource from storage.
+//      */
+//     public function destroy(Vehicle $vehicle)
+//     {
+//         //
+//     }
+// }

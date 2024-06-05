@@ -190,6 +190,29 @@
           </li>
         </ul>
       </li>
+      <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
+          <div data-i18n="Account Settings">Vehicles</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item">
+            <a href="pages-account-settings-account.html" class="menu-link">
+              <div data-i18n="Account">{{ auth()->user()->name }}</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="{{ route('vehicle.index') }}" class="menu-link">
+              <div data-i18n="Notifications">Index</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="{{ route('vehicle.create') }}"  class="menu-link">
+              <div data-i18n="Connections">create</div>
+            </a>
+          </li>
+        </ul>
+      </li>
       {{-- <li class="menu-item">
         <a
           href="#"
@@ -241,13 +264,33 @@
         </ul>
       </li> --}}
       <!-- Components -->
-      <li class="menu-header fw-medium mt-4"><span class="menu-header-text">Components</span></li>
+      {{-- <li class="menu-header fw-medium mt-4"><span class="menu-header-text">Components</span></li> --}}
       <!-- Cards -->
       <li class="menu-item">
         <a href="{{ URL('tickets') }}" class="menu-link">
           <i class="menu-icon tf-icons mdi mdi-credit-card-outline"></i>
           <div data-i18n="Basic">Ticket</div>
         </a>
+        <ul class="menu-sub">
+          <li class="menu-item">
+            <a href="pages-account-settings-account.html" class="menu-link">
+              <div data-i18n="Account">{{ auth()->user()->name }}</div>
+            </a>
+          </li>
+          {{-- <li class="menu-item">
+            <a href="{{ route('tickets.index') }}" class="menu-link">
+              <div data-i18n="Notifications">Index</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="{{ route('tickets.create') }}"  class="menu-link">
+              <div data-i18n="Connections">create</div>
+            </a>
+          </li> --}}
+        </ul>
+      </li>
+      <li class="menu-item">
+        
       </li>
       <li class="menu-item">
         <a href="cards-basic.html" class="menu-link">
